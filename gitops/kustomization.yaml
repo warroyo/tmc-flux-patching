@@ -5,3 +5,4 @@ kind: Kustomization
 resources:
 - source-controller-patch.yaml
 - source-controller-overlay.yaml
+- helm-controller-overlay.yaml

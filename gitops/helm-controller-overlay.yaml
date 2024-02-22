@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: source-controller-proxy-overlay
+  name: helm-controller-proxy-overlay
   namespace: tanzu-fluxcd-packageinstalls
 stringData:
   add-proxy.yaml: |
     #@ load("@ytt:overlay", "overlay")
-    #@overlay/match by=overlay.subset({"kind": "Deployment", "metadata": {"name": "source-controller"}})
+    #@overlay/match by=overlay.subset({"kind": "Deployment", "metadata": {"name": "helm-controller"}})
     ---
     spec:
       template:
