@@ -9,15 +9,15 @@ stringData:
     #@overlay/match by=overlay.subset({"kind": "Deployment", "metadata": {"name": "source-controller"}})
     ---
     spec:
-    template:
-      spec:
-        #@overlay/match missing_ok=True
-        containers:
-          #@overlay/match by=overlay.all
-          - env:
-            - name: NO_PROXY
-              value: 
-            - name: HTTPS_PROXY
-              value: 
-            - name: HTTP_PROXY
-              value:
+      template:
+        spec:
+          #@overlay/match missing_ok=True
+          containers:
+            #@overlay/match by=overlay.all
+            - env:
+              - name: NO_PROXY
+                value: 
+              - name: HTTPS_PROXY
+                value: 
+              - name: HTTP_PROXY
+                value:
