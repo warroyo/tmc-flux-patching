@@ -5,7 +5,7 @@ metadata:
   namespace: tanzu-fluxcd-packageinstalls
 stringData:
   add-proxy.yaml: |
-    @ load("@ytt:overlay", "overlay")
+    #@ load("@ytt:overlay", "overlay")
     #@overlay/match by=overlay.subset({"kind": "Deployment", "metadata": {"name": "source-controller"}})
     ---
     spec:
