@@ -1,0 +1,8 @@
+---
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageInstall
+metadata:
+  annotations:
+    kustomize.toolkit.fluxcd.io/prune: disabled
+    kustomize.toolkit.fluxcd.io/ssa: merge
+    ext.packaging.carvel.dev/ytt-paths-from-secret-name.0: source-controller-proxy-overlay
